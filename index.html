@@ -2,46 +2,77 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Diario Cosechas</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <div class="tituloPagina">Diario Cosechas</div>
-    <div class="fechaPagina">19 de mayo de 2025</div>
-    <nav class="menuPagina">
+    <div class="encabezado">
+      <div class="tituloPrincipal">Diario Cosechas</div>
+      <div class="fecha">19 de mayo de 2025</div>
+    </div>
+    <nav class="menuNav">
       <ul>
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Política</a></li>
+        <li><a href="#">Clima</a></li>
+        <li><a href="#">Soja</a></li>
+        <li><a href="#">Maíz</a></li>
         <li><a href="#">Economía</a></li>
-        <li><a href="#">Deportes</a></li>
-        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Tecnología</a></li>
       </ul>
-      <div class="menuHamburguesa">☰</div>
+      <div class="hamburguesa">☰</div>
     </nav>
   </header>
 
-  <main class="mainContenedor">
-    <section class="noticiaPrincipal">
-      <img src="img/noticia1.jpg" alt="Noticia principal">
-      <h1>Noticia de Ultimo Momento</h1>
-      <p>Como Afecta la cosecha a la economia Argentina <a href="#">Leer más</a></p>
-    </section>
+  <main class="contenedor"> 
+    <article class="noticiaPrincipal">
+      <img src="img/cosechaarg.jpg" alt="Cosecha y economía argentina en 2025" />
+      <div>
+        <h1>Cómo afecta la cosecha a la economía argentina</h1>
+        <p>
+          La campaña agrícola 2024/25 muestra un fuerte impacto positivo en el PBI nacional.
+          Las exportaciones aumentan y reactivan el interior productivo.
+          <a href="#">Leer más</a>
+        </p>
+      </div>
+    </article>
 
     <section class="noticiasSecundarias">
-      <article><a href="#">Lluvias para los proximos dias</a></article>
-      <article><a href="#">Sequia en el noroeste argentino</a></article>
-      <article><a href="#">Grandes Rindes de la cosecha 24/25 de soja</a></article>
+      <h2>Últimas noticias</h2>
+      <article><a href="#">▶️ Lluvias para los próximos días en zona núcleo</a></article>
+      <article><a href="#">▶️ Sequía en el noroeste argentino preocupa a productores</a></article>
+      <article><a href="#">▶️ Grandes rindes en la cosecha 24/25 de soja</a></article>
     </section>
 
     <aside class="publicidad">
-      <img src="img/publi1.jpg" alt="Publicidad">
+      <h3>Publicidad</h3>
+      <img src="img/cofco.jpg" alt="Publicidad de Cofco International, empresa exportadora de granos" />
+      <img src="img/syngenta semillas.jpg" alt="Publicidad de Syngenta, empresa de semillas y agroquímicos" />
     </aside>
+
+    <section class="seccionesAdicionales">
+      <div class="seccionAdc">
+        <h2>Soja</h2>
+        <ul>
+          <li><a href="#">Mercado internacional de soja al alza</a></li>
+          <li><a href="#">Nuevas tecnologías para el cultivo</a></li>
+          <li><a href="#">Impacto climático en la producción</a></li>
+        </ul>
+      </div>
+      <div class="seccionAdc">
+        <h2>Clima</h2>
+        <ul>
+          <li><a href="#">Pronóstico semanal de lluvias</a></li>
+          <li><a href="#">Alertas meteorológicas en Argentina</a></li>
+          <li><a href="#">Cambios climáticos y agricultura</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Diario Cosechas</p>
+    <p>© 2025 Diario Cosechas - Todos los derechos reservados</p>
   </footer>
 </body>
 </html>

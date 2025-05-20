@@ -7,9 +7,9 @@
   
   body {
     font-family: "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
   }
   
   a {
@@ -19,12 +19,6 @@
   
   a:hover {
     text-decoration: underline;
-  }
-  
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f7f7f7;
   }
   
   header {
@@ -37,12 +31,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
   
   .tituloPrincipal {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
-    text-align: center;
   }
   
   .fecha {
@@ -52,19 +46,15 @@ body {
   .menuNav ul {
     display: none;
     list-style: none;
-    padding: 0;
-    margin: 0;
   }
   
   .menuNav a {
     color: white;
-    text-decoration: none;
   }
   
   .hamburguesa {
     font-size: 1.5em;
     cursor: pointer;
-    text-align: right;
   }
   
   @media (min-width: 768px) {
@@ -78,7 +68,8 @@ body {
       display: none;
     }
   }
-main.contenedor {
+  
+  main.contenedor {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -90,8 +81,9 @@ main.contenedor {
     flex-direction: column;
     gap: 1em;
     background-color: white;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   .noticiaPrincipal img {
@@ -101,43 +93,42 @@ main.contenedor {
   }
   
   .noticiaPrincipal h1 {
-    margin: 0;
+    font-size: 1.6em;
   }
   
   .noticiaPrincipal p {
     margin-top: 0.5em;
-    line-height: 1.4;
-  }
-  
-  .noticiaPrincipal a {
-    color: #00704a;
   }
   
   .noticiasSecundarias {
     background-color: white;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
   
   .noticiasSecundarias h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
   }
   
   .noticiasSecundarias article {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
   }
   
   .publicidad {
     background-color: white;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
   
   .publicidad img {
     width: 100%;
-    margin-bottom: 1em;
     border-radius: 8px;
+    margin-bottom: 1em;
   }
+  
   .seccionesAdicionales {
     display: flex;
     flex-direction: column;
@@ -145,28 +136,24 @@ main.contenedor {
     margin-top: 1.5em;
   }
   
-  .seccionesAdicionales .seccionAdc {
+  .seccionAdc {
     background-color: white;
-    padding: 1em;
+    padding: 1.5em;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   }
   
-  .seccionesAdicionales .seccionAdc h2 {
+  .seccionAdc h2 {
     margin-bottom: 0.7em;
+    font-size: 1.2em;
   }
   
-  .seccionesAdicionales .seccionAdc ul {
+  .seccionAdc ul {
     list-style: none;
-    padding-left: 0;
   }
   
-  .seccionesAdicionales .seccionAdc ul li {
+  .seccionAdc ul li {
     margin-bottom: 0.5em;
-  }
-  
-  .seccionesAdicionales .seccionAdc a {
-    text-decoration: none;
-    color: #2a7f62;
   }
   
   footer {
@@ -177,10 +164,10 @@ main.contenedor {
     margin-top: 2em;
   }
   
-  /* MEDIA QUERIES para tablets y escritorio */
   @media (min-width: 768px) {
     main.contenedor {
       flex-direction: row;
+      flex-wrap: wrap;
       gap: 2em;
     }
   
@@ -188,35 +175,24 @@ main.contenedor {
       flex: 2;
     }
   
-    .noticiasSecundarias {
+    .noticiasSecundarias,
+    .publicidad,
+    .seccionesAdicionales {
       flex: 1;
-      order: 2;
-    }
-  
-    .publicidad {
-      flex: 1;
-      order: 3;
     }
   
     .seccionesAdicionales {
       flex-direction: column;
-      flex: 1;
-      order: 4;
-    }
-  
-    .seccionesAdicionales .seccionAdc {
-      margin-bottom: 1em;
     }
   }
   
   @media (min-width: 1024px) {
     .seccionesAdicionales {
       flex-direction: row;
-      gap: 1em;
     }
   
-    .seccionesAdicionales .seccionAdc {
+    .seccionAdc {
       flex: 1;
     }
-  }    
+  }
   

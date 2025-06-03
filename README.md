@@ -19,7 +19,7 @@ Este proyecto es una portada de diario digital desarrollada con HTML, CSS y Flex
 
 ## Deploy en GitHub Pages
 
-🔗 [Ver sitio en línea]: https://github.com/JeremiasBarrile/TP2-Flexbox-Daw.git
+🔗 [Ver sitio en línea]: https://jeremiasbarrile.github.io/TP2-Flexbox-Daw/
 
 ## Autor
 

@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: "Segoe UI", Roboto, sans-serif;
   background-color: #fdf9f0;
@@ -11,7 +15,7 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 a {
@@ -88,13 +92,21 @@ header {
   }
 }
 
-main.contenedor {
+.layoutPrincipal {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
   padding: 1.5em;
   max-width: 1200px;
   width: 100%;
+  flex: 1;
+}
+
+.layoutPrincipal .contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
 .noticiaPrincipal {
@@ -120,17 +132,14 @@ main.contenedor {
   margin-bottom: 0.5em;
 }
 
-.noticiasSecundarias,
-.publicidad,
-.seccionesAdicionales {
+.noticiasSecundarias {
   background-color: white;
   padding: 1.5em;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.noticiasSecundarias h2,
-.seccionAdc h2 {
+.noticiasSecundarias h2 {
   font-size: 1.2em;
   margin-bottom: 1em;
 }
@@ -139,39 +148,48 @@ main.contenedor {
   margin-bottom: 0.8em;
 }
 
-.publicidad img {
+aside.publicidad {
+  width: 100%;
+  margin-top: 1.5em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+aside.publicidad h3 {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+aside.publicidad img {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 1em;
 }
 
-.seccionesAdicionales {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-top: 1.5em;
+@media (min-width: 992px) {
+  .layoutPrincipal {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2em;
+  }
+
+  .layoutPrincipal .contenido {
+    width: 80%;
+  }
+
+  aside.publicidad {
+    width: 20%;
+    position: sticky;
+    top: 1.5em;
+    height: fit-content;
+    align-self: flex-start;
+  }
 }
 
-.seccionAdc ul {
-  list-style: none;
-}
-
-.seccionAdc ul li {
-  margin-bottom: 0.5em;
-}
-
-footer {
-  background-color: #3d2b1f;
-  color: white;
-  text-align: center;
-  padding: 1em;
-  margin-top: 2em;
-  width: 100%;
-}
-
-/* Suscription */
-
-.formularioContenedor {
+main.formularioContenedor {
   max-width: 900px;
   width: 100%;
   padding: 2em;
@@ -182,6 +200,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 #formTitle {
@@ -220,6 +239,11 @@ input {
   font-size: 0.9em;
 }
 
+.inputError {
+  border: 2px solid #b30000;
+  background-color: #fff5f5;
+}
+
 .btnEnviar {
   margin-top: 2em;
   padding: 0.8em 2em;
@@ -250,3 +274,13 @@ input {
     grid-column: span 2;
   }
 }
+
+footer {
+  background-color: #3d2b1f;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto;
+  width: 100%;
+}
+

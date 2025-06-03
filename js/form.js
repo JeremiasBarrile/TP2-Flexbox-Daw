@@ -2,6 +2,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("suscriptionForm");
   const inputs = form.querySelectorAll("input");
   const formTitle = document.getElementById("formTitle");
+  const hamburguesa = document.querySelector(".hamburguesa");
+  const menu = document.querySelector(".menuNav ul");
+
+  if (hamburguesa && menu) {
+    hamburguesa.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  }
 
   function validarCampo(input) {
     const id = input.id;
@@ -86,7 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     let formularioValido = true;
@@ -111,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("blur", () => {
       validarCampo(input);
     });
-    
+
     input.addEventListener("focus", () => {
       document.getElementById("error-" + input.id).textContent = "";
       input.classList.remove("inputError");

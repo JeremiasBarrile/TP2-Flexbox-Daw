@@ -57,5 +57,16 @@
   <footer>
     <p>© 2025 Diario Cosechas - Todos los derechos reservados</p>
   </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburguesa = document.querySelector(".hamburguesa");
+    const menu = document.querySelector(".menuNav ul");
+
+    hamburguesa.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
 </body>
 </html>

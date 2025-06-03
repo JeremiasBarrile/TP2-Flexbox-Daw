@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suscripción - Diario Cosechas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/form.js"></script>
+</head>
+<body>
+  <header>
+    <div class="encabezado">
+      <div class="tituloPrincipal">Diario Cosechas</div>
+      <div class="fecha">19 de mayo de 2025</div>
+    </div>
+    <nav class="menuNav">
+      <ul>
+        <li><a href="/html/index.html">Inicio</a></li>
+        <li><a href="#">Clima</a></li>
+        <li><a href="#">Soja</a></li>
+        <li><a href="#">Maíz</a></li>
+        <li><a href="#">Economía</a></li>
+        <li><a href="#">Tecnología</a></li>
+        <li><a href="/html/suscription.html">Suscripción</a></li>
+      </ul>
+      <div class="hamburguesa">☰</div>
+    </nav>
+  </header>
+
+  <main class="contenedor">
+    <section class="formularioBox">
+      <h2 id="formTitulo">Hola</h2>
+      <form id="suscriptionForm" class="formulario">
+        <div class="columna">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" />
+          <span id="error-nombre" class="errorMsg"></span>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <span id="error-email" class="errorMsg"></span>
+
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" />
+          <span id="error-contrasena" class="errorMsg"></span>
+
+          <label for="repetirContrasena">Repetir contraseña</label>
+          <input type="password" id="repetirContrasena" />
+          <span id="error-repetirContrasena" class="errorMsg"></span>
+
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" />
+          <span id="error-edad" class="errorMsg"></span>
+        </div>
+
+        <div class="columna">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" />
+          <span id="error-telefono" class="errorMsg"></span>
+
+          <label for="direccion">Dirección</label>
+          <input type="text" id="direccion" />
+          <span id="error-direccion" class="errorMsg"></span>
+
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" />
+          <span id="error-ciudad" class="errorMsg"></span>
+
+          <label for="cp">Código Postal</label>
+          <input type="text" id="cp" />
+          <span id="error-cp" class="errorMsg"></span>
+
+          <label for="dni">DNI</label>
+          <input type="text" id="dni" />
+          <span id="error-dni" classw="errorMsg"></span>
+        </div>
+
+        <div class="botonEnviar">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Diario Cosechas - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
